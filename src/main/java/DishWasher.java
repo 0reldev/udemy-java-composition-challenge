@@ -5,7 +5,9 @@ public class DishWasher extends Appliance {
     }
 
     public void doDishes() {
-        if (super.hasWorkToDo)
+        if (hasWorkToDo) {
             System.out.println("Dishes are being done.");
+            hasWorkToDo = false;
+        }
     }
 }

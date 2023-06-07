@@ -5,7 +5,11 @@ public class Refrigerator extends Appliance {
     }
 
     public void orderFood() {
-        if (super.hasWorkToDo)
+        if (hasWorkToDo) {
             System.out.println("Food is being ordered.");
+            hasWorkToDo = false;
+        }
     }
+
+
 }

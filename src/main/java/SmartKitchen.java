@@ -10,6 +10,12 @@ public class SmartKitchen {
         this.iceBox = iceBox;
     }
 
+    public SmartKitchen() {
+        brewMaster = new CoffeeMaker();
+        dishWasher = new DishWasher();
+        iceBox = new Refrigerator();
+    }
+
     public void addWater() {
         brewMaster.setHasWorkToDo(true);
         System.out.println("Water is being added.");
@@ -35,5 +41,17 @@ public class SmartKitchen {
         iceBox.orderFood();
         dishWasher.doDishes();
         brewMaster.brewCoffee();
+    }
+
+    public CoffeeMaker getBrewMaster() {
+        return brewMaster;
+    }
+
+    public DishWasher getDishWasher() {
+        return dishWasher;
+    }
+
+    public Refrigerator getIceBox() {
+        return iceBox;
     }
 }

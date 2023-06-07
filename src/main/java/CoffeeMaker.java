@@ -5,7 +5,9 @@ public class CoffeeMaker extends Appliance {
     }
 
     public void brewCoffee() {
-        if (super.hasWorkToDo)
+        if (hasWorkToDo) {
             System.out.println("Coffee is being brewed.");
+            hasWorkToDo = false;
+        }
     }
 }
